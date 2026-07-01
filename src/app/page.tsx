@@ -34,13 +34,13 @@ export default function Home() {
           <nav>
             <ul className={`nav-links ${mobileMenuOpen ? "open" : ""}`}>
               <li>
-                <Link href="#freelancers" onClick={() => setMobileMenuOpen(false)}>
-                  Freelancers
+                <Link href="#problems" onClick={() => setMobileMenuOpen(false)}>
+                  The Problem
                 </Link>
               </li>
               <li>
-                <Link href="#businesses" onClick={() => setMobileMenuOpen(false)}>
-                  Businesses
+                <Link href="#features" onClick={() => setMobileMenuOpen(false)}>
+                  Trust Pillars
                 </Link>
               </li>
               <li>
@@ -131,8 +131,63 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Stats Ribbon Section */}
+        <section className="stats-ribbon">
+          <div className="container stats-grid">
+            <div>
+              <div className="stat-val">$455B</div>
+              <div className="stat-lbl">Freelance Market Size</div>
+            </div>
+            <div>
+              <div className="stat-val">15%</div>
+              <div className="stat-lbl">Annual Growth Rate</div>
+            </div>
+            <div>
+              <div className="stat-val">$50B+</div>
+              <div className="stat-lbl">Digital Asset Opportunity</div>
+            </div>
+            <div>
+              <div className="stat-val">59%</div>
+              <div className="stat-lbl">Freelancers Facing Payment Issues</div>
+            </div>
+          </div>
+        </section>
+
+        {/* The Problem & Pain Points Section */}
+        <section className="problem-section" id="problems">
+          <div className="container" style={{ textAlign: "center" }}>
+            <h2 className="section-title">The Market Problem</h2>
+            <p style={{ color: "var(--text-muted)", marginTop: "-2.5rem", marginBottom: "2rem", fontSize: "1.1rem" }}>
+              Freelancers and clients are underserved by rigid systems and payment bottlenecks.
+            </p>
+            
+            <div className="problem-grid">
+              <div className="problem-card">
+                <div className="problem-icon">✖</div>
+                <h3 className="problem-title">Inflexible Platforms</h3>
+                <p className="problem-desc">Overly strict platform rules limit freelancer flexibility and client options, creating unnecessary friction.</p>
+              </div>
+              <div className="problem-card">
+                <div className="problem-icon">✖</div>
+                <h3 className="problem-title">Opaque Trust Systems</h3>
+                <p className="problem-desc">Lack of transparent verification, review mechanisms, or credentials portfolios to build genuine transactional trust.</p>
+              </div>
+              <div className="problem-card">
+                <div className="problem-icon">✖</div>
+                <h3 className="problem-title">Emerging Markets Gap</h3>
+                <p className="problem-desc">Lack of direct integrations with local payment gateways like Paystack and Flutterwave, causing payment delays.</p>
+              </div>
+              <div className="problem-card">
+                <div className="problem-icon">✖</div>
+                <h3 className="problem-title">Insecure Asset Trading</h3>
+                <p className="problem-desc">Trading YouTube channels, AdSense accounts, and domains is highly complex, insecure, and prone to escrow fraud.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Built for Trust Section */}
-        <section className="trust-section" id="escrow">
+        <section className="trust-section" id="features">
           <div className="container">
             <h2 className="section-title">Built for Trust</h2>
             
@@ -157,7 +212,7 @@ export default function Home() {
               </div>
 
               {/* Card 2 */}
-              <div className="trust-card" id="assets">
+              <div className="trust-card">
                 <div className="card-image-wrapper">
                   <Image
                     src="/assets.jpg"
@@ -176,7 +231,7 @@ export default function Home() {
               </div>
 
               {/* Card 3 */}
-              <div className="trust-card" id="freelancers">
+              <div className="trust-card">
                 <div className="card-image-wrapper">
                   <Image
                     src="/portfolio.jpg"
@@ -197,8 +252,126 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Detailed Ecosystem Pillars Section */}
+        <section className="ecosystem-section">
+          <div className="container" style={{ textAlign: "center" }}>
+            <h2 className="section-title">Our Ecosystem Pillars</h2>
+            
+            <div className="ecosystem-grid text-left">
+              {/* Card 1 */}
+              <div className="ecosystem-card">
+                <div className="eco-header">
+                  <div className="eco-number">01</div>
+                  <h3 className="eco-title">Verification Process</h3>
+                </div>
+                <p style={{ color: "var(--text-muted)", fontSize: "0.95rem" }}>
+                  Every professional undergoes a rigorous identity and credential verification process to ensure only qualified experts join.
+                </p>
+                <ul className="eco-list">
+                  <li>Portfolio checks and verification</li>
+                  <li>Background identity screenings</li>
+                  <li>Automated skill assessments</li>
+                </ul>
+              </div>
+
+              {/* Card 2 */}
+              <div className="ecosystem-card">
+                <div className="eco-header">
+                  <div className="eco-number">02</div>
+                  <h3 className="eco-title">AI-Powered Rankings</h3>
+                </div>
+                <p style={{ color: "var(--text-muted)", fontSize: "0.95rem" }}>
+                  Our AI ranking engine dynamically evaluates and scores professionals, prioritizing quality talent for clients.
+                </p>
+                <ul className="eco-list">
+                  <li>Delivery speed evaluations</li>
+                  <li>Client rating and feedback reviews</li>
+                  <li>Dispute history and repeat hire rates</li>
+                </ul>
+              </div>
+
+              {/* Card 3 */}
+              <div className="ecosystem-card">
+                <div className="eco-header">
+                  <div className="eco-number">03</div>
+                  <h3 className="eco-title">Flexible Milestone Terms</h3>
+                </div>
+                <p style={{ color: "var(--text-muted)", fontSize: "0.95rem" }}>
+                  Reduce contract risk with structured payment phases, giving security to both clients and service providers.
+                </p>
+                <ul className="eco-list">
+                  <li>Upfront terms setup (e.g. 50% terms)</li>
+                  <li>Automated deal contract generation</li>
+                  <li>DNS and file verification checks</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* How It Works Flow Section */}
+        <section className="flow-section">
+          <div className="container">
+            <h2 className="section-title">How It Works</h2>
+            
+            <div className="flow-grid">
+              <div className="flow-card">
+                <div className="flow-badge">1</div>
+                <h3 className="flow-title">Set Up Deal</h3>
+                <p className="flow-desc">Define details, milestones, and asset specs on our wizard portal.</p>
+              </div>
+              <div className="flow-card">
+                <div className="flow-badge">2</div>
+                <h3 className="flow-title">Fund Escrow</h3>
+                <p className="flow-desc">Client deposits funds safely using Paystack or Flutterwave.</p>
+              </div>
+              <div className="flow-card">
+                <div className="flow-badge">3</div>
+                <h3 className="flow-title">Deliver & Verify</h3>
+                <p className="flow-desc">Freelancer completes the work; our assistant runs quality audits.</p>
+              </div>
+              <div className="flow-card">
+                <div className="flow-badge">4</div>
+                <h3 className="flow-title">Painless Payout</h3>
+                <p className="flow-desc">Upon approval, funds settle directly to the seller's local currency bank account.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Business Model Section */}
+        <section className="biz-section">
+          <div className="container" style={{ textAlign: "center" }}>
+            <h2 className="section-title">Our Revenue Model</h2>
+            <p style={{ color: "var(--text-muted)", marginTop: "-2.5rem", marginBottom: "2rem", fontSize: "1.1rem" }}>
+              Transparent fee structures aligned with freelancer and buyer success.
+            </p>
+            
+            <div className="biz-grid">
+              <div className="biz-card">
+                <div className="biz-icon">💼</div>
+                <h3 className="biz-title">Freelance Matches</h3>
+                <div className="biz-fee">5% – 10%</div>
+                <p className="biz-desc">Commission fee on completed freelance service transactions.</p>
+              </div>
+              <div className="biz-card">
+                <div className="biz-icon">🪙</div>
+                <h3 className="biz-title">Asset Marketplace</h3>
+                <div className="biz-fee">Revenue Split</div>
+                <p className="biz-desc">Commission fee on completed YouTube, AdSense, and domain listings.</p>
+              </div>
+              <div className="biz-card">
+                <div className="biz-icon">🛡️</div>
+                <h3 className="biz-title">AI Escrow Service</h3>
+                <div className="biz-fee">Facilitation Fee</div>
+                <p className="biz-desc">Service fee for managing secure third-party contract transactions.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Footer Banner Section */}
-        <section className="footer-banner-section" id="businesses">
+        <section className="footer-banner-section">
           <div className="container footer-banner-container">
             <div className="footer-image-wrapper">
               <Image
