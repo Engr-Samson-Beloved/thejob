@@ -61,7 +61,7 @@ function EscrowWizardContent() {
       <header className="header">
         <div className="container nav-container">
           <Link href="/" className="logo-link logo-font" style={{ display: "flex", alignItems: "center", gap: "0.6rem" }}>
-            <Image src="/logo.jpg" alt="PicJob Logo" width={36} height={36} style={{ borderRadius: "0.5rem" }} />
+            <Image src="/logo.png" alt="PicJob Logo" width={36} height={36} style={{ borderRadius: "0.5rem" }} />
             <span>PicJob</span>
           </Link>
           <nav>
