@@ -470,3 +470,300 @@ h1, h2, h3, .logo-font {
     margin: 0 auto;
   }
 }
+
+/* Forms & Card Layouts for Subpages */
+.page-wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--bg-cream);
+}
+
+.form-card {
+  background-color: var(--white);
+  padding: 3rem 2.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+  max-width: 480px;
+  width: 100%;
+  margin: 4rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.form-title {
+  font-size: 2.2rem;
+  text-align: center;
+  letter-spacing: -0.5px;
+}
+
+.form-subtitle {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: -1.2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.form-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.form-input, .form-select, .form-textarea {
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #E2E8F0;
+  background-color: var(--white);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease;
+  width: 100%;
+  color: var(--text-dark);
+}
+
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  outline: none;
+  border-color: var(--brand-orange);
+}
+
+.form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23555555'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1.25rem;
+  padding-right: 2.5rem;
+}
+
+.form-footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.form-footer a {
+  color: var(--brand-orange);
+  font-weight: 600;
+}
+
+.form-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Role Selector Group */
+.role-selectors {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.role-selector {
+  border: 2px solid #E2E8F0;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: transparent;
+}
+
+.role-selector:hover {
+  border-color: var(--brand-orange);
+}
+
+.role-selector.active {
+  border-color: var(--brand-orange);
+  background-color: rgba(255, 92, 34, 0.04);
+}
+
+.role-selector-title {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text-dark);
+  margin-bottom: 0.25rem;
+}
+
+.role-selector-desc {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Badges & Metrics (Used in Marketplace & Portfolios) */
+.card-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  align-self: flex-start;
+}
+
+.badge-orange {
+  background-color: rgba(255, 92, 34, 0.1);
+  color: var(--brand-orange);
+}
+
+.badge-yellow {
+  background-color: rgba(242, 201, 76, 0.15);
+  color: #B08B1C;
+}
+
+.badge-green {
+  background-color: rgba(39, 174, 96, 0.1);
+  color: #27AE60;
+}
+
+.badge-blue {
+  background-color: rgba(45, 156, 219, 0.1);
+  color: #2D9CDB;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  border-top: 1px solid #F1F1F1;
+  border-bottom: 1px solid #F1F1F1;
+  padding: 1rem 0;
+  margin: 0.5rem 0;
+}
+
+.metric-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.metric-val {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.metric-lbl {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 0.5rem;
+}
+
+.card-price {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+/* Escrow Wizard Timeline */
+.timeline {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin: 2.5rem 0;
+  width: 100%;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #E2E8F0;
+  z-index: 1;
+}
+
+.timeline-progress {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 0;
+  height: 4px;
+  background-color: var(--brand-orange);
+  z-index: 2;
+  transition: width 0.3s ease;
+}
+
+.timeline-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 3;
+  width: 80px;
+}
+
+.step-node {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #E2E8F0;
+  border: 4px solid var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  box-shadow: 0 0 0 2px #E2E8F0;
+  transition: all 0.3s ease;
+}
+
+.timeline-step.active .step-node {
+  background-color: var(--brand-orange);
+  color: var(--white);
+  box-shadow: 0 0 0 2px var(--brand-orange);
+}
+
+.timeline-step.completed .step-node {
+  background-color: #27AE60;
+  color: var(--white);
+  box-shadow: 0 0 0 2px #27AE60;
+}
+
+.step-label {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.timeline-step.active .step-label {
+  color: var(--brand-orange);
+}
+
+.timeline-step.completed .step-label {
+  color: #27AE60;
+}
+
+/* Explore Grid */
+.explore-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+

@@ -43,26 +43,47 @@ export default function Home() {
                 </Link>
               </li>
               <li>
-                <Link href="#escrow" onClick={() => setMobileMenuOpen(false)}>
+                <Link href="/assets" onClick={() => setMobileMenuOpen(false)}>
+                  Marketplace
+                </Link>
+              </li>
+              <li>
+                <Link href="/escrow" onClick={() => setMobileMenuOpen(false)}>
                   Escrow
                 </Link>
               </li>
               {mobileMenuOpen && (
-                <li style={{ marginTop: "1rem" }}>
-                  <Link
-                    href="#get-started"
-                    className="btn btn-primary"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    Get Started
-                  </Link>
-                </li>
+                <>
+                  <li style={{ marginTop: "1rem" }}>
+                    <Link
+                      href="/login"
+                      className="btn btn-secondary"
+                      style={{ width: "100%" }}
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Log In
+                    </Link>
+                  </li>
+                  <li style={{ marginTop: "0.5rem" }}>
+                    <Link
+                      href="/get-started"
+                      className="btn btn-primary"
+                      style={{ width: "100%" }}
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Get Started
+                    </Link>
+                  </li>
+                </>
               )}
             </ul>
           </nav>
 
-          <div className="nav-cta">
-            <Link href="#get-started" className="btn btn-primary">
+          <div className="nav-cta" style={{ display: "flex", gap: "1.5rem", alignItems: "center" }}>
+            <Link href="/login" style={{ fontWeight: "600", color: "var(--text-dark)", textDecoration: "none" }}>
+              Log In
+            </Link>
+            <Link href="/get-started" className="btn btn-primary">
               Get Started
             </Link>
           </div>
@@ -84,10 +105,10 @@ export default function Home() {
                 built-in escrow.
               </p>
               <div className="hero-ctas">
-                <Link href="#hire" className="btn btn-primary">
+                <Link href="/get-started?role=client" className="btn btn-primary">
                   Hire Talent
                 </Link>
-                <Link href="#find-work" className="btn btn-secondary">
+                <Link href="/get-started?role=freelancer" className="btn btn-secondary">
                   Find Work
                 </Link>
               </div>
@@ -195,7 +216,7 @@ export default function Home() {
                 We believe talent is everywhere. Opportunity should be too. THE
                 Job levels the playing field for freelancers across the continent.
               </p>
-              <Link href="#join" className="btn btn-accent">
+              <Link href="/get-started" className="btn btn-accent">
                 Join the Community
               </Link>
             </div>
