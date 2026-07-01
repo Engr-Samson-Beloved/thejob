@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -396,6 +397,9 @@ export default function Home() {
           </div>
         </section>
       </main>
+
+      {/* Shared Footer Links */}
+      <Footer />
 
       {/* Orange Stripe Base */}
       <footer className="footer-bottom-stripe"></footer>

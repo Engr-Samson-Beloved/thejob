@@ -4,6 +4,7 @@ import { Suspense, useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
+import Footer from "@/components/Footer";
 
 function EscrowWizardContent() {
   const searchParams = useSearchParams();
@@ -351,6 +352,9 @@ function EscrowWizardContent() {
           </div>
         )}
       </main>
+
+      {/* Shared Footer Links */}
+      <Footer />
 
       <footer className="footer-bottom-stripe" style={{ marginTop: "auto" }}></footer>
     </div>

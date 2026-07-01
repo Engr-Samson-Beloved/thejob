@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import Footer from "@/components/Footer";
 
 interface Asset {
   id: string;
@@ -249,6 +250,9 @@ export default function Marketplace() {
           </div>
         )}
       </main>
+
+      {/* Shared Footer Links */}
+      <Footer />
 
       {/* Footer stripe */}
       <footer className="footer-bottom-stripe" style={{ marginTop: "auto" }}></footer>
