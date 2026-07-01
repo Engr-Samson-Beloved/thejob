@@ -16,8 +16,9 @@ export default function Home() {
       {/* Header */}
       <header className="header">
         <div className="container nav-container">
-          <Link href="/" className="logo-link logo-font">
-            THE Job
+          <Link href="/" className="logo-link logo-font" style={{ display: "flex", alignItems: "center", gap: "0.6rem" }}>
+            <Image src="/logo.jpg" alt="PicJob Logo" width={36} height={36} style={{ borderRadius: "0.5rem" }} />
+            <span>PicJob</span>
           </Link>
 
           <button
@@ -100,7 +101,7 @@ export default function Home() {
                 Find the right person. Get the job done. Get paid.
               </h1>
               <p className="hero-description">
-                THE Job connects businesses with Africa's top freelance talent.
+                PicJob connects businesses with Africa's top freelance talent.
                 Post a gig, hire with confidence, and pay securely through
                 built-in escrow.
               </p>
@@ -213,8 +214,7 @@ export default function Home() {
                 Built by Africans, for Africa's future.
               </h2>
               <p className="footer-banner-text">
-                We believe talent is everywhere. Opportunity should be too. THE
-                Job levels the playing field for freelancers across the continent.
+                We believe talent is everywhere. Opportunity should be too. PicJob levels the playing field for freelancers across the continent.
               </p>
               <Link href="/get-started" className="btn btn-accent">
                 Join the Community

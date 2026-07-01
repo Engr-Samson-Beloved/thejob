@@ -2,6 +2,7 @@
 
 import { Suspense, useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
 
 function GetStartedContent() {
@@ -34,14 +35,15 @@ function GetStartedContent() {
   return (
     <div className="page-wrap" style={{ justifyContent: "center", alignItems: "center", padding: "1.5rem" }}>
       <header style={{ position: "absolute", top: "2rem", left: "2rem" }}>
-        <Link href="/" className="logo-link logo-font" style={{ fontSize: "2rem" }}>
-          THE Job
+        <Link href="/" className="logo-link logo-font" style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+          <Image src="/logo.jpg" alt="PicJob Logo" width={32} height={32} style={{ borderRadius: "0.25rem" }} />
+          <span>PicJob</span>
         </Link>
       </header>
 
       <div className="form-card">
         <div>
-          <h1 className="form-title logo-font">Join THE Job</h1>
+          <h1 className="form-title logo-font">Join PicJob</h1>
           <p className="form-subtitle">Create a free account to hire or work</p>
         </div>
 

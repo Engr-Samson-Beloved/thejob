@@ -9,8 +9,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "THE Job - African Freelance & Digital Asset Marketplace",
-  description: "THE Job connects businesses with Africa's top freelance talent. Post a gig, hire with confidence, and pay securely through built-in escrow.",
+  title: "PicJob - African Freelance & Digital Asset Marketplace",
+  description: "PicJob connects businesses with Africa's top freelance talent. Post a gig, hire with confidence, and pay securely through built-in escrow.",
 };
 
 export default function RootLayout({
